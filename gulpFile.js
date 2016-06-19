@@ -46,8 +46,9 @@ var PUBLIC_PATH = {
   cssInPath: './public/css/',
   jsPath: "./public/js/**/*.js",
   imgsPath: "./public/imgs/**/*.*",
-  templatePath: "./public/templates/*.html",
-  htmlPath: "./public/*.html",
+  templatePath: "./public/templates/**/*.html",
+  htmlInPath: "./public/*.html",
+  htmlOutPath: "./public/",
   vendorPath: './public/vendor/**/*.*'
 };
 
@@ -115,11 +116,13 @@ HTML: html gulp task, only for index.html where the file should be preprocessed 
 */
 gulp.task('html', function() {
   if(environment == 'production') {
-    return gulp.src(PUBLIC_PATH.htmlPath)
+    return gulp.src(PUBLIC_PATH.htmlInPath)
       .pipe(preprocessor({context: {NODE_ENV: 'production', DEBUG: true}}))
       .pipe(gulp.dest(BUILD_PATH.htmlPath));
   } else {
-    return gulp.src(PUBLIC_PATH.htmlPath)
+    return gulp.src(PUBLIC_PATH.htmlInPath)
+      .pipe(preprocessor({context: {NODE_ENV: 'development', DEBUG: true}}))
+      .pipe(gulp.dest(PUBLIC_PATH.htmlOutPath))
       .pipe(livereload());
   }
 });
@@ -156,7 +159,7 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(PUBLIC_PATH.sassPath, ['styles']); // Watch for sass file changes
   gulp.watch(PUBLIC_PATH.jsPath, ['scripts']); // Watch for js files changes
-  gulp.watch(PUBLIC_PATH.htmlPath, ['html']); // Watch for html file changes
+  gulp.watch(PUBLIC_PATH.htmlInPath, ['html']); // Watch for html file changes
   gulp.watch(PUBLIC_PATH.templatePath, ['template']); // Watch for HTML templates file changes
   gulp.watch(PUBLIC_PATH.imgsPath, ['images']); // Watch for image file changes
 });
@@ -194,7 +197,7 @@ gulp.task('clean', function() {
 /**
 GULP: default task - only for development environment
 */
-gulp.task('default', ['watch', 'open']);
+gulp.task('default', ['watch']);
 
 /**
 GULP: build task - for production environment for build purpose only

@@ -1,0 +1,40 @@
+.sidebar-navbar {
+  .sidebar-nav {
+    background-color: $PrimaryColor1;
+    position: absolute;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    li {
+      text-indent: 20px;
+      line-height: 40px;
+      cursor: pointer;
+
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: $White;
+        margin-left: -25px;
+        i {
+          margin-right: 10px;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: #fff;
+          background: rgba(255,255,255,0.2);
+        }
+
+        &:active, &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .top-nav-bar {
+      top: 5em;
+  }
+}

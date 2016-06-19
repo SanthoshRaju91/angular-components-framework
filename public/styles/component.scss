@@ -1,5 +1,6 @@
-body {
-  h1 {
-    color: #ff5252;
-  }
-}
+@import 'utilities/color-palette';
+@import 'utilities/fonts';
+@import "base/base-style";
+@import "components/topNavBar";
+@import "components/secondaryTopNavBar.scss";
+@import "components/sideNavBar.scss";

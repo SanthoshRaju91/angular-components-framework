@@ -1,0 +1,23 @@
+.sec-nav-bar {
+  padding-top: 70px;
+  .container-fluid {
+    .navbar-nav {
+      li {
+        a {
+          font-size: $smallUp;
+          cursor: pointer;
+
+          span {
+            font-size: $medium;
+            display: block;
+            text-align: center;
+          }
+
+          &:hover {
+            color: $PrimaryColor1;
+          }
+        }
+      }
+    }
+  }
+}
