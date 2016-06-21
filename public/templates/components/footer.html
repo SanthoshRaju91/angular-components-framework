@@ -1,0 +1,24 @@
+<div class="navbar navbar-default {{isBottom}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <span class="site-copyright">
+          &copy; {{year}}
+        </span>
+        <span class="site-brand">
+          {{data.brand}}
+        </span>
+        <span class="site-social-media" ng-if="data.socialMedia">
+          <a ng-repeat="social in data.socialMedia" href="">
+            <i class="{{social.iconClass}}">
+          </a>
+        </span>
+      </div>
+      <div class="col-md-6 author-section">
+        <div class="site-author">
+          Crafted with <i class="fa fa-heart-o" aria-hidden="true"></i> by {{data.author}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

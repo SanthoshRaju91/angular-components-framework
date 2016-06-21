@@ -1,0 +1,55 @@
+<div class="components-page">
+  <h1>Secondary Top Navigation Bar</h1>
+  <p>
+    This components provides a secondary navigation bar right below the main / primary navigation.
+    <br>
+    This is an alternate for side navigation bar menu.
+  </p>
+  <h3>Usage</h3>
+  <span class="usage-span"> <!-- Usage generated from http://markup.su/highlighter/ -->
+    <span class="usage-category">HTML directive</span>
+      <div hljs>
+  <secondary-top-nav-bar menus="" top=""></secondary-top-nav-bar>
+      </div>
+    </pre>
+  </span>
+
+  <ul>
+    <li>menus - list of secondary menu items (example provided below)</li>
+    <li>top - <b>Boolean</b> specifying whether the secondary nav bar should stick below the top nav-bar or not.</li>
+  </ul>
+
+  <span class="usage-span">
+    <span class="usage-category"> Scope Object to be placed in the controller - list of <b>secondary-top-nav-bar</b> menu items.</span>
+    <div hljs>
+      $scope.secondaryMenuList = [{
+        name: "Weather Widgets",
+        iconClass: "",
+        url: ""
+      }, {
+        name: "Chart Widgets",
+        iconClass: "",
+        url: ""
+      }, {
+        name: "Statistics",
+        iconClass: "",
+        url: ""
+      }, {
+        name: "Maps Integration",
+        iconClass: "",
+        url: ""
+      }, {
+        name: "Work Widgets",
+        iconClass: "",
+        url: ""
+      }];
+    </div>
+  </span>
+
+  <h3>Result / Output</h3>
+  <span class="usage-output">
+    <div class="container">
+      <secondary-top-nav-bar menus="secondaryMenuList" top="false"></secondary-top-nav-bar>
+    </div>
+  </span>
+</div>

@@ -1,0 +1,54 @@
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    margin-left: 220px;
+}
+
+.landing-page {
+  p {
+    font-size: $smallUp;
+    line-height: 2em;
+  }
+
+  ul {
+    li {
+      list-style: none;
+      letter-spacing: 1px;
+      font-weight: $NormalWeight;
+    }
+  }
+}
+
+.components-page {
+  width: 960px;
+  p {
+    font-size: $smallUp;
+    line-height: 2em;
+  }
+  .usage-span {
+    .usage-category {
+      font-size: $smallUp;
+      line-height: 2em;
+    }
+    pre {
+      width: 50%;
+    }
+  }
+
+  .usage-output {
+    .container {
+      max-width: 850px;
+      margin: 0px;
+      .navbar-custom {
+        width: 870px;
+      }
+      .custom {
+        width: 870px;
+      }
+    }
+  }
+}

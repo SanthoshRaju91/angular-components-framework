@@ -1,0 +1,66 @@
+<div class="components-page">
+  <h1>Top Navigation Bar</h1>
+  <p>
+      <b>Top Navigation Bar</b> components allows you to create a top bar navigation for your page, with stated based <b>(angular-ui-router)</b> transistions.
+      <br>
+      Also you can integrate setting menu, customization pages and logout options for user and user profiles too.
+  </p>
+  <h3>Usage</h3>
+  <span class="usage-span"> <!-- Usage generated from http://markup.su/highlighter/ -->
+    <span class="usage-category">HTML directive</span>
+      <div hljs>
+  <top-nav-bar options="navData" top="false"></top-nav-bar>
+      </div>
+    </pre>
+  </span>
+
+  <ul>
+    <li>options - list of menu configuration (example provided below)</li>
+    <li>top - <b>Boolean</b> specifying whether the nav bar should stick to the top or not.</li>
+  </ul>
+
+  <span class="usage-span">
+    <span class="usage-category">Scope object - configuration data for top-nav-bar (Place this in your main angular controller)</span>
+    <div hljs>
+    $scope.navData = {
+      logo: {
+        name: "Markers",
+        image: "http://getbootstrapadmin.com/remark/material/topicon/assets/images/logo-blue.png"
+      },
+      search: true,
+      notification: {
+        show: true,
+        iconClass: "fa fa-bell-o"
+      },
+      messages: {
+        show: true,
+        iconClass: "fa fa-paper-plane-o"
+      },
+      user: {
+        show: true,
+        image: "http://getbootstrapadmin.com/remark/material/global/portraits/5.jpg",
+        menuOptions: [{
+          iconClass: "fa fa-cogs",
+          name: "Settings",
+          toRoute: ""
+        }, {
+          iconClass: "fa fa-sliders",
+          name: "My-Page",
+          toRoute: ""
+        }, {
+          iconClass: "fa fa-sign-out",
+          name: "Logout",
+          toRoute: ""
+        }]
+      }
+    };
+    </div>
+  </span>
+
+  <h3>Result / Output</h3>
+  <span class="usage-output">
+    <div class="container">
+      <top-nav-bar options="navData" top="false"></top-nav-bar>
+    </div>
+  </span>
+</div>

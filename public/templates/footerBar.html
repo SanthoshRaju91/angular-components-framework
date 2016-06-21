@@ -1,0 +1,51 @@
+<div class="components-page">
+  <h1>Footer Bar</h1>
+  <p>
+    This component provides a bottom fixed footer bar to be loaded to your page.
+    <br>
+    Component can also be configured with social media links, which will be provided in the configuration data.
+  </p>
+
+  <h3>Usage</h3>
+  <span class="usage-span"> <!-- Usage generated from http://markup.su/highlighter/ -->
+    <span class="usage-category">HTML directive</span>
+      <div hljs>
+  <footer data="" bottom=""></footer>
+      </div>
+    </pre>
+  </span>
+
+  <ul>
+    <li>data - configuration object to be provided to the footer directive, we can also have social media configuration. (example is given below)</li>
+    <li>bottom - <b>Boolean</b> specifies whether the footer should be stuck to the bottom of the page.</li>
+  </ul>
+
+  <span class="usage-span">
+    <span class="usage-category"> Scope object from the controller - which is the configuration object to the footer directive.</span>
+    <div hljs>
+    $scope.footerData = {
+      brand: "Makers",
+      author: "Team Oct",
+      socialMedia:[{
+        name: 'facebook',
+        iconClass: 'fa fa-facebook',
+        route: ''
+      }, {
+        name: 'twitter',
+        iconClass: 'fa fa-twitter',
+        route: ''
+      }, {
+        name: 'google',
+        iconClass: 'fa fa-google-plus',
+        route: ''
+      }]
+    };
+    </div>
+  </span>
+  <h3>Result / Output</h3>
+  <span class="usage-output">
+    <div class="container">
+      <footer data="footerData" bottom=""></footer>
+    </div>
+  </span>
+</div>

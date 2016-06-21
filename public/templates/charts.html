@@ -1,0 +1,64 @@
+<div class="components-page">
+  <h1>Charts Widget Component</h1>
+  <p>
+    Could be used for building Charts very easily, with this directive creating a dashboard with awesome charts is just a childs play.
+    <br>
+    Please note, more charts and feature will be added to this component in the future. For now we have integrated all types of basic charts need to build a complex dashboard.
+    More complex charts and its configuration are to come, so please be patient.
+  </p>
+  <h3>Usage</h3>
+  <span class="usage-span"> <!-- Usage generated from http://markup.su/highlighter/ -->
+    <span class="usage-category">HTML directive</span>
+      <div hljs>
+  <charts data="chartData"></charts>
+      </div>
+    </pre>
+  </span>
+
+  <ul>
+    <li>data - configuration data with the type of chart to be rendered to be given. Please note this should be given in the controller.(example below)</li>
+  </ul>
+  <span class="usage-span">
+    <span class="usage-category">Scope object, having the configuration data to render the chart.</span>
+    <div hljs>
+$scope.chartData = {
+    columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25]
+    ],
+    type: 'line'
+};
+    </div>
+  </span>
+<h3>Result / Output</h3>
+<h5>Line Chart</h5>
+<span class="usage-output">
+    <div class="container">
+      <charts id="'chart1'" data="chartData1" width="600" height="300"></charts>
+    </div>
+  </span>
+
+<h5>Pie Chart</h5>
+<span class="usage-output">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <charts id="'chart2'" data="chartData2" width="300" height="300"></charts>
+        </div>
+        <div class="col-md-6">
+          <h5>Config Object</h5>
+          <div hljs>
+$scope.chartData2 = {
+      columns: [
+        ['data1', 30],
+        ['data2', 120],
+    ],
+    type: 'pie'
+};
+          </div>
+        </div>
+      </div>
+    </div>
+  </span>
+
+</div>

@@ -1,0 +1,61 @@
+<div class="components-page">
+  <h1>Project Scaffolding</h1>
+
+  <p>
+    There is scaffolding structure which can be downloaded from the below button.
+    <br>
+    This has a complete structure of the application, all the *.js, *.css, *.html code should go to the <b>/public</b> folder.
+    <br>
+    Also, comes with a complete task automation, both for development and production.
+    <br>
+    In case of <b>development</b>, the gulp file has a watch on all the *.scss, *.js & *.html files, so when the file is changed, the development build process starts automatically
+    by compiling the scss files to css files and js files to check for any synatic errors.
+
+    And more, you don't have to reload the browser to view your changes, the gulp files automatically detects the changes made to any of the files and reloads the browser.
+  </p>
+  <p>
+    Where as in case of production, there is small build process, where the *.css and *.js files are concatenated and minified and creates a <b>/build</b>  folder containing
+    the final production build which can be deployed in project server serving static files.
+  </p>
+  <h3>Instructions to setup</h3>
+
+  <ul>
+    <li>
+      Download the Project Scaffolding by clicking the below button.
+      <br><br>
+      <a href="https://github.com/SanthoshRaju91/projectScaffolding/archive/master.zip" class="btn btn-danger">Download Project Folder</a>
+      <br><br>
+      <div hljs>
+Or Clone it via git
+git clone https://github.com/SanthoshRaju91/projectScaffolding.git
+      </div>
+    </li>
+    <li>
+      Then install the bower and node modules required to start the development. (Please have node.js, gulp & bower installed)
+      <br><br>
+      <div hljs>
+npm install;
+
+bower install;
+      </div>
+    </li>
+    <li>
+      Run the below gulp command to start the development
+      <br><br>
+      <div hljs>
+gulp
+(or)
+gulp default
+      </div>
+    </li>
+    <li>
+      Run to the below gulp command for production below
+      <br><br>
+      <div hljs>
+gulp build
+      </div>
+    </li>
+  </ul>
+
+  <h5>That's all folks, you now have a both production and development environment setup in about 10-ish minutes.</h5>
+</div>

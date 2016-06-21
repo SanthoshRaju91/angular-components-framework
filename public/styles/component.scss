@@ -2,5 +2,8 @@
 @import 'utilities/fonts';
 @import "base/base-style";
 @import "components/topNavBar";
-@import "components/secondaryTopNavBar.scss";
-@import "components/sideNavBar.scss";
+@import "components/secondaryTopNavBar";
+@import "components/sideNavBar";
+@import "components/footer";
+
+@import "base/index";

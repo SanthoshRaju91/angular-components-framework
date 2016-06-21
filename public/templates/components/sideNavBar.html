@@ -1,7 +1,12 @@
 <div class="sidebar-navbar">
   <ul class="sidebar-nav">
-    <li ng-repeat="menu in menus">
-      <a><i class={{menu.iconClass}}></i> {{menu.name}}</a>
+    <li class="sidebar-brand" ng-if="menus.brand">
+      <a ui-sref="{{menus.brand.url}}">
+        {{menus.brand.name}}
+      </a>
+    </li>
+    <li ng-repeat="menu in menus.menus">
+      <a ui-sref={{menu.url}}><i class={{menu.iconClass}}></i> {{menu.name}}</a>
     </li>
   </ul>
 </div>

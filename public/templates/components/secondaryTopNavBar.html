@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li ng-repeat="menu in menus">
-        <a>
+        <a href="{{menu.url}}">
           <span class="{{menu.iconClass}}" aria-hidden="true"></span>
           {{menu.name}}
         </a>
